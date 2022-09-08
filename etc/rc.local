@@ -1,0 +1,7 @@
+ 
+exec 1>/tmp/rc.local.log 2>&1  # send stdout and stderr from rc.local to a log file
+set -x                         # tell sh to display commands before execution
+
+# SuperCap UPS monitor script:
+python3 /home/pi/safe_poweroff.py
+

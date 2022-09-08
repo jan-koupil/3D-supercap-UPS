@@ -1,0 +1,9 @@
+# executable
+chmod +x safe_poweroff.py
+
+# jinak neni zaregistrovano pro roota
+sudo pip3 install RPi.GPIO
+
+# dat do "autostartu"
+sudo nano /etc/rc.local
+
