@@ -16,7 +16,7 @@ difference() {
     translate([th, th, th + eps])
         cube(size=[l - 2 * th, w -  2 * th, fullH]);
 
-    translate([93.25, -eps, th + fullH - 2.25])
+    translate([93.25, -eps, th + fullH - 2.25]) //cut off for cable
         cube(size=[4.5, th + 2 * eps, 2.25 + eps]);
 }
 
