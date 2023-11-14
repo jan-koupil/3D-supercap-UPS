@@ -2,7 +2,7 @@ $fn = 30;
 
 eps = 0.05;
 th = 1.5;
-l = 145;
+l = 177;
 w = 94;
 rpiTh = 1.5;
 legH = 9;
@@ -15,6 +15,9 @@ difference() {
     cube(size=[l, w, th + fullH]);
     translate([th, th, th + eps])
         cube(size=[l - 2 * th, w -  2 * th, fullH]);
+
+    translate([93.25, -eps, th + fullH - 2.25]) //cut off for cable
+        cube(size=[4.5, th + 2 * eps, 2.25 + eps]);
 }
 
 
@@ -26,45 +29,51 @@ translate([4.5, 4.5, 0])
 translate([4.5, 89.5, 0])
     leg (3 + eps, 1.2, fullH);
 
-translate([140.5, 4.5, 0])
+translate([172.5, 4.5, 0])
     leg (3 + eps, 1.2, fullH);
 
-translate([140.5, 89.5, 0])
+translate([172.5, 89.5, 0])
     leg (3 + eps, 1.2, fullH);
 
 
 //rpi
-translate([11, 25, 0])
+translate([11, 11, 0])
     leg (3, 2.1/2, legH);
 
-translate([11, 83, 0])
+translate([11, 69, 0])
     leg (3, 2.1/2, legH);    
 
-translate([60, 25, 0])
+translate([60, 11, 0])
     leg (3, 2.1/2, legH);
 
-translate([60, 83, 0])
+translate([60, 69, 0])
     leg (3, 2.1/2, legH);    
 
 
-//LM2596
-translate([68.5, 25, 0])
+//Buck
+translate([76, 30, 0])
     leg (3, 2.4/2, legH);
 
-translate([85.1, 56, 0])
+translate([76, 83, 0])
+    leg (3, 2.4/2, legH);
+
+translate([115, 30, 0])
+    leg (3, 2.4/2, legH);
+
+translate([115, 83, 0])
     leg (3, 2.4/2, legH);
 
 //UPS
-translate([93.5, 17, 0])
+translate([128, 14, 0])
     leg (3, 2.4/2, legH);
 
-translate([93.5, 83, 0])
+translate([128, 80, 0])
     leg (3, 2.4/2, legH);    
 
-translate([134.5, 17, 0])
+translate([169, 14, 0])
     leg (3, 2.4/2, legH);
 
-translate([134.5, 83, 0])
+translate([169, 80, 0])
     leg (3, 2.4/2, legH);     
 
 
